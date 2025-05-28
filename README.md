@@ -1,41 +1,17 @@
-# Image Spam Detection using Deep Learning
+# 📸 Image Spam Detection with Transfer Learning
 
-This project is a binary image classifier that distinguishes between **spam images** (e.g., advertisement, clickbait) and **natural/ham images** using a deep learning model based on **VGG19** and transfer learning.
+This is a complete image classification pipeline in Python that detects **spam images** (e.g., clickbait, phishing ads) versus **non-spam** content using a frozen **VGG-19** CNN model.
 
-## 📁 Dataset
-- **SpamImages** and **NaturalImages** are used.
-- Automatically downloaded and cleaned for duplicates and corruption.
+## 🧠 Project Features
 
-## 🧠 Model
-- Uses **VGG19** with `imagenet` weights (frozen layers)
-- Final layers are custom: Flatten → Dense → Dropout → Dense → Sigmoid
-- Binary classification (`spam` = 1, `ham` = 0)
+- ✅ Automatically removes corrupted and duplicate files
+- ✅ Uses VGG-19 pretrained on ImageNet
+- ✅ Applies basic image augmentation
+- ✅ Evaluates results using Precision, Recall, F1-score & Confusion Matrix
+- ✅ Saves the trained model in both `.h5` and SavedModel formats
 
-## ⚙️ Training Pipeline
-- Includes data augmentation (random flip & rotation)
-- Uses `EarlyStopping`, `ModelCheckpoint`, and `TensorBoard`
-- TensorFlow/Keras pipeline with `image_dataset_from_directory`
+## 🚀 How to Use
 
-## 📊 Evaluation
-- Accuracy and loss monitored via TensorBoard
-- Best model saved to `saved_model/`
-
-## 🚀 Run the project
-
-```bash
-pip install -r requirements.txt
-python spam_detection.py
-```
-
-TensorBoard logs will be saved and accessible using:
-
-```bash
-tensorboard --logdir logs/fit
-```
-
-## 📦 Requirements
-See `requirements.txt`
-
-## 🤖 Author
-Fady Abi Rached — 2025
-
+1. Install dependencies:
+   ```bash
+   pip install tensorflow keras numpy pillow matplotlib scikit-learn
