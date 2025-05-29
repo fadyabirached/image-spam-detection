@@ -15,3 +15,6 @@ This is a complete image classification pipeline in Python that detects **spam i
 1. Install dependencies:
    ```bash
    pip install tensorflow keras numpy pillow matplotlib scikit-learn
+'''
+
+Note: Dataset is private.
